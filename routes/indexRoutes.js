@@ -6,7 +6,6 @@ const express = require("express");
 
 //2) pedirle a express el Router
 
-const fs = require("fs");
 
 const router = express.Router();
 //path es un módulo de node. Me permite usar el ".join"
@@ -24,7 +23,6 @@ router.post("/api/users/new", (req, res)=> {
     phone: req.body.telefono
   }
   users.push(newUser)
-fs.writeFileSync("users.json", JSON.stringify(users))
 res.send(req.body);
 })
 
