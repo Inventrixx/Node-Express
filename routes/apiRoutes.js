@@ -8,7 +8,6 @@ const express = require("express");
 const fs = require("fs");
 
 const router = express.Router();
-//persistencia de datos: la información queda permanente
 const users = [
   {
     id: 1,

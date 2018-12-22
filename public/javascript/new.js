@@ -10,12 +10,14 @@ $('form button').click(function () {
 
   // el texto cumple con la expresion regular, .test() retorna true
   if (validarNumero.test($telefono) === false) {
-    alert('el teléfono solo tienen que ser números');
+    $("#ex1 p").html("El campo sólo pueden ser números");
+    $("#ex1").modal();
     return;
   }
 
   if (validarEmail.test($email) === false) {
-    alert('mandaste fruta con el email');
+    $("#ex1 p").html("El e-mail es inválido");
+    $("#ex1").modal();
     return;
   }
 
@@ -31,8 +33,7 @@ $('form button').click(function () {
     data: elNuevoUsuario
   })
   .done(function () {
-    alert('usuario creado!');
-    location.href = '/users';
+    $("#ex1").modal();
   })
   .fail(function (err) {
     alert('salio mal');

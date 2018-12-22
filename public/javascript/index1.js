@@ -35,9 +35,7 @@ $(document).on("click", ".btn.edit", function(){
 $(document).on("click", ".btn-filter", function(){
   //lo importante es que cuando yo ponga valores en mi input
   //busque en "base de datos" lo que coincida
-  const miBusqueda = $("input[name='filter']").val();
-  console.log(miBusqueda)
- 
+  const miBusqueda = $("input[name='filter']").val(); 
   //miBusqueda tiene que ser el parámetro para buscar en mi base de datos
   //después del signo de pregunta es un 'queryParam'
 

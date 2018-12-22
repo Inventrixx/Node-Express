@@ -24,13 +24,15 @@ $.ajax(`/api/users/${id}`).done(function(user){
 
 $("form button").click(function(){
   //validando los campos
-  if (!validarNumero.test($telefono)) {
-    alert('el teléfono solo tienen que ser números');
+  if (!validarNumero.test($telefono.val())) {
+    $("#ex1 p").html("El campo sólo pueden ser números");
+    $("#ex1").modal();
     return;
   }
 
-  if (!validarEmail.test($email)) {
-    alert('mandaste fruta con el email');
+  if (!validarEmail.test($email.val())) {
+    $("#ex1 p").html("El e-mail es inválido");
+    $("#ex1").modal();
     return;
   }
   $.ajax(`/api/users/${id}`,{
@@ -44,8 +46,8 @@ $("form button").click(function(){
     /*otra forma de hacerlo
     .done(function(){...}) */
     success: function() {
-      alert("todo editado");
-      location.href = `/users`;
+      $("#ex1 p").html("Cambios guardados.")
+      $("#ex1").modal();
     }
   })
 })
