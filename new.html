@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Nuevo Usuario</h1>
+  <div class="input-container">
+<form action="/api/users/new" method="POST">
+
+  <input type="text" name="nombre" placeholder="nombre" maxlength="30">
+  <input type="text" name="apellido" placeholder="apellido" maxlength="30">
+  <input type="text" name="telefono" placeholder="Teléfono">
+  <input type="text" name="email" placeholder="example@example.com">
+  <button type="button">Guardar</button>
+</form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/javascript/new.js"></script>
+</body>
+</html>
